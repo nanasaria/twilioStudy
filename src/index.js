@@ -42,6 +42,7 @@ async function sendMessageToFlex(chatId, body) {
     }
 
     await createMessage(existingConversationSid, identity, body)
+    deleteConversations(conversationSid)
 }
 
 async function findExistingConversation(identity){
